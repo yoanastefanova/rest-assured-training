@@ -10,13 +10,9 @@ public class SerializationDeserialization {
 
   Employee employee = new Employee("Yoana", "Stefanova", "female",
       24, 3656, false);
-
   Employee employeeOnlyId = new Employee();
-
   Employee employee1 = new Employee();
   ObjectMapper objectMapper = new ObjectMapper();
-  String employeeJson;
-
 
   @Test
   public void printEmployees() {
@@ -27,7 +23,8 @@ public class SerializationDeserialization {
 
   @Test
   public void serializationEmployee() throws JsonProcessingException {
-    String employeeJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employee);
+    String employeeJson = objectMapper.writerWithDefaultPrettyPrinter()
+        .writeValueAsString(employee);
     System.out.println("Serialization:\n");
     System.out.println(employeeJson);
 
@@ -43,8 +40,8 @@ public class SerializationDeserialization {
 //    System.out.println("Eligible for vote :- "+employeeFromJson.getEligibleForVote());
 //    System.out.println("Full name :- "+employeeFromJson.getFullName());
 
-
-    String employeeJson1 = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeOnlyId);
+    String employeeJson1 = objectMapper.writerWithDefaultPrettyPrinter()
+        .writeValueAsString(employeeOnlyId);
     System.out.println("Serialization:\n");
     System.out.println(employeeJson1);
 

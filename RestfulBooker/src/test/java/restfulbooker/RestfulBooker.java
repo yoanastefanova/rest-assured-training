@@ -202,17 +202,18 @@ public class RestfulBooker {
         .basePath("booking/" + bookingId)
         .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
         .contentType(ContentType.JSON)
-        .body("{\r\n" +
-            "    \"firstname\" : \"Amod\",\r\n" +
-            "    \"lastname\" : \"Mahajan\",\r\n" +
-            "    \"totalprice\" : 222,\r\n" +
-            "    \"depositpaid\" : true,\r\n" +
-            "    \"bookingdates\" : {\r\n" +
-            "        \"checkin\" : \"2022-01-01\",\r\n" +
-            "        \"checkout\" : \"2022-01-01\"\r\n" +
-            "    },\r\n" +
-            "    \"additionalneeds\" : \"Breakfast\"\r\n" +
-            "}")
+        .body("""
+            {\r
+                "firstname" : "Amod",\r
+                "lastname" : "Mahajan",\r
+                "totalprice" : 222,\r
+                "depositpaid" : true,\r
+                "bookingdates" : {\r
+                    "checkin" : "2022-01-01",\r
+                    "checkout" : "2022-01-01"\r
+                },\r
+                "additionalneeds" : "Breakfast"\r
+            }""")
         .when()
         .put()
         .then()
