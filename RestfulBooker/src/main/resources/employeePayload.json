@@ -1,0 +1,10 @@
+{
+  "firstName" : "Amod",
+  "lastName" : "Mahajan",
+  "gender" : "Male",
+  "age" : 29,
+  "salary" : 12323.56,
+  "married" : false,
+  "fullName" : "Animesh Prashant",
+  "eligibleForVote" : false
+}
